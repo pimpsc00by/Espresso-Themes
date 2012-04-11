@@ -1,0 +1,112 @@
+/*
+	@theme Nautilus
+	@override-placeholders html, xml, css, php, js, html-php
+	@author Rommert Zijlstra
+	@version 1.1
+	@Based on the Argonaut theme for TextMate
+*/
+
+@base {
+	background-color: rgba(12, 24, 48, 1);
+	color: #B2B2B2;
+	font-weight: normal;
+	insertion-point-color: #FF2200;
+	selection-background-color: #002F53;
+}
+
+tag, css, source, sourcecode { spell-check: disabled; }
+
+/* General */
+* > class.name,
+* > identifier.function > class.name,
+* > class > name,
+* > support.class { color: #7A88F6; }
+
+* > comment,
+* > comment > punctuation { color: #00A6FF; }
+
+* > keyword.constant,
+* > keyword.constant.other,
+* > literal.keyword { color:  #A4ED2D; font-weight: normal; }
+
+* > function > name { color: #FFCA00; font-weight: normal; }
+* > identifier.function,
+* > identifier.function > name { color: #B2B2B2; font-weight: normal; }
+
+* > function.support > name,
+* > identifier.function.support > name { color: #815DB3; font-weight: normal; }
+
+* > keyword,
+* > * > keyword.definition,
+* > keyword.modifier { color: #FFFFFF; }
+
+* > operator,
+* > keyword.operator { color: #606E7E; }
+
+* > literal.numeric { background: rgba(0, 0, 0, 0); color: #D70000; }
+
+* > literal.string { color: #6497C5; }
+
+* > variable,
+* > identifier.variable { color: #0068C5; }
+
+/* HTML */
+html * { font-weight: normal; }
+
+tag,
+tag.doctype punctuation.definition { color: #FFFFFF; }
+tag name { color: #0065D3; }
+tag.doctype { color: #888888; }
+tag > attribute-value { color: #6497C5; }
+
+tag.script,
+embedded { background-color: rgba(8, 16, 32, 0.5); }
+
+/* CSS */
+css > css.selector,
+* css > property-value zunit { color: #B2B2B2; }
+
+* css > keyword.control,
+css punctuation { color: #FFFFFF; }
+* css > support.constant { color: #FFCA00; }
+
+* css > property-name { color: #7A88F6; }
+* css > property-value { color: #06960E; }
+* css > property-value color,
+* css > property-value punctuation.definition { color: #A4ED2D; }
+* css > property-value nzumeric { color: #D70000; }
+
+* css > support.function,
+* css > property-value support.function { color: #815DB3; }
+* css > property-value variable { color: #6497C5; }
+
+/* JS */
+js support.constant { color: #06960E; }
+js constant.numeric { color: #D70000; }
+
+js function,
+js storage.type { color: #FFFFFF; }
+js function.dom,
+js support.function { color: #815DB3; }
+
+/* PHP */
+php comment.phpDoc { color: #00A6FF; }
+php comment.phpDoc.keyword { color: #B2B2B2; }
+
+php identifier.function.support_date > name,
+php identifier.function.support_pcre > name,
+php keyword.definition.array,
+php keyword.constant.echo,
+php keyword.constant.print { color: #815DB3; font-weight: normal; }
+
+php operator.dollar-sign,
+php identifier.variable property.name { color: #0068C5; }
+
+php keyword.constant.core,
+php keyword.constant.std { color: #06960E; }
+
+php delimiter.pointer,
+php operator.pointer { color: #B2B2B2; }
+
+/* lil' fix */
+source.php.html { color: #B2B2B2; }
